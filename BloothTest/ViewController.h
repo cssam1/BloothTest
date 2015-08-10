@@ -7,8 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 
-@interface ViewController : UIViewController
+@protocol id<CBCentralManagerDelegate>;
+
+@end
+
+@interface ViewController : UIViewController<CBCentralManagerDelegate,CBPeripheralDelegate>{
+
+    CBPeripheral *didDiscoverPeripheral;
+    CBCentralManager *centralManager;
+}
+
 
 
 @end

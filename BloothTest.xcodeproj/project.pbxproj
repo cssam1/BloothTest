@@ -13,18 +13,9 @@
 		25345D8E1A2C59B60030AC57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25345D8C1A2C59B60030AC57 /* Main.storyboard */; };
 		25345D901A2C59B60030AC57 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25345D8F1A2C59B60030AC57 /* Images.xcassets */; };
 		25345D931A2C59B60030AC57 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25345D911A2C59B60030AC57 /* LaunchScreen.xib */; };
-		25345D9F1A2C59B60030AC57 /* BloothTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25345D9E1A2C59B60030AC57 /* BloothTestTests.m */; };
+		25345DA91A2C59D30030AC57 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25345DA81A2C59D30030AC57 /* CoreBluetooth.framework */; };
+		25345DB21A2C65B70030AC57 /* AlertUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 25345DB11A2C65B70030AC57 /* AlertUtil.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		25345D991A2C59B60030AC57 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 25345D771A2C59B60030AC57 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 25345D7E1A2C59B60030AC57;
-			remoteInfo = BloothTest;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		25345D7F1A2C59B60030AC57 /* BloothTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BloothTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,9 +28,9 @@
 		25345D8D1A2C59B60030AC57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		25345D8F1A2C59B60030AC57 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		25345D921A2C59B60030AC57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		25345D981A2C59B60030AC57 /* BloothTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BloothTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		25345D9D1A2C59B60030AC57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25345D9E1A2C59B60030AC57 /* BloothTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BloothTestTests.m; sourceTree = "<group>"; };
+		25345DA81A2C59D30030AC57 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		25345DB01A2C65B70030AC57 /* AlertUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertUtil.h; sourceTree = "<group>"; };
+		25345DB11A2C65B70030AC57 /* AlertUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,13 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		25345D951A2C59B60030AC57 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				25345DA91A2C59D30030AC57 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,8 +48,8 @@
 		25345D761A2C59B60030AC57 = {
 			isa = PBXGroup;
 			children = (
+				25345DA81A2C59D30030AC57 /* CoreBluetooth.framework */,
 				25345D811A2C59B60030AC57 /* BloothTest */,
-				25345D9B1A2C59B60030AC57 /* BloothTestTests */,
 				25345D801A2C59B60030AC57 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				25345D7F1A2C59B60030AC57 /* BloothTest.app */,
-				25345D981A2C59B60030AC57 /* BloothTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +65,7 @@
 		25345D811A2C59B60030AC57 /* BloothTest */ = {
 			isa = PBXGroup;
 			children = (
+				25345DAC1A2C647E0030AC57 /* Utils */,
 				25345D861A2C59B60030AC57 /* AppDelegate.h */,
 				25345D871A2C59B60030AC57 /* AppDelegate.m */,
 				25345D891A2C59B60030AC57 /* ViewController.h */,
@@ -102,21 +87,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		25345D9B1A2C59B60030AC57 /* BloothTestTests */ = {
+		25345DAC1A2C647E0030AC57 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				25345D9E1A2C59B60030AC57 /* BloothTestTests.m */,
-				25345D9C1A2C59B60030AC57 /* Supporting Files */,
+				25345DB01A2C65B70030AC57 /* AlertUtil.h */,
+				25345DB11A2C65B70030AC57 /* AlertUtil.m */,
 			);
-			path = BloothTestTests;
-			sourceTree = "<group>";
-		};
-		25345D9C1A2C59B60030AC57 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				25345D9D1A2C59B60030AC57 /* Info.plist */,
-			);
-			name = "Supporting Files";
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,24 +116,6 @@
 			productReference = 25345D7F1A2C59B60030AC57 /* BloothTest.app */;
 			productType = "com.apple.product-type.application";
 		};
-		25345D971A2C59B60030AC57 /* BloothTestTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 25345DA51A2C59B60030AC57 /* Build configuration list for PBXNativeTarget "BloothTestTests" */;
-			buildPhases = (
-				25345D941A2C59B60030AC57 /* Sources */,
-				25345D951A2C59B60030AC57 /* Frameworks */,
-				25345D961A2C59B60030AC57 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				25345D9A1A2C59B60030AC57 /* PBXTargetDependency */,
-			);
-			name = BloothTestTests;
-			productName = BloothTestTests;
-			productReference = 25345D981A2C59B60030AC57 /* BloothTestTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -168,10 +127,6 @@
 				TargetAttributes = {
 					25345D7E1A2C59B60030AC57 = {
 						CreatedOnToolsVersion = 6.1;
-					};
-					25345D971A2C59B60030AC57 = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 25345D7E1A2C59B60030AC57;
 					};
 				};
 			};
@@ -189,7 +144,6 @@
 			projectRoot = "";
 			targets = (
 				25345D7E1A2C59B60030AC57 /* BloothTest */,
-				25345D971A2C59B60030AC57 /* BloothTestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -205,13 +159,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		25345D961A2C59B60030AC57 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -219,29 +166,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25345DB21A2C65B70030AC57 /* AlertUtil.m in Sources */,
 				25345D8B1A2C59B60030AC57 /* ViewController.m in Sources */,
 				25345D881A2C59B60030AC57 /* AppDelegate.m in Sources */,
 				25345D851A2C59B60030AC57 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		25345D941A2C59B60030AC57 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				25345D9F1A2C59B60030AC57 /* BloothTestTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		25345D9A1A2C59B60030AC57 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 25345D7E1A2C59B60030AC57 /* BloothTest */;
-			targetProxy = 25345D991A2C59B60030AC57 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		25345D8C1A2C59B60030AC57 /* Main.storyboard */ = {
@@ -279,8 +211,10 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -297,11 +231,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PROVISIONING_PROFILE = "45119A3F-5FC4-495A-B8AC-FD5D6B67F39B";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
 			};
 			name = Debug;
 		};
@@ -321,8 +257,10 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__ARC_BRIDGE_CAST_NONARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -333,11 +271,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				PROVISIONING_PROFILE = "45119A3F-5FC4-495A-B8AC-FD5D6B67F39B";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
+				VALIDATE_PRODUCT = NO;
 			};
 			name = Release;
 		};
@@ -345,9 +285,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = BloothTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "45119A3F-5FC4-495A-B8AC-FD5D6B67F39B";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -355,43 +300,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = BloothTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		25345DA61A2C59B60030AC57 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BloothTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BloothTest.app/BloothTest";
-			};
-			name = Debug;
-		};
-		25345DA71A2C59B60030AC57 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BloothTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BloothTest.app/BloothTest";
+				PROVISIONING_PROFILE = "45119A3F-5FC4-495A-B8AC-FD5D6B67F39B";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -414,14 +330,7 @@
 				25345DA41A2C59B60030AC57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		25345DA51A2C59B60030AC57 /* Build configuration list for PBXNativeTarget "BloothTestTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				25345DA61A2C59B60030AC57 /* Debug */,
-				25345DA71A2C59B60030AC57 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
